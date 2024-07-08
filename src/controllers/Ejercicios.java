@@ -1,35 +1,36 @@
 package controllers;
 
-import java.util.HashMap;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Ejercicios {
 
     /**
-     * Determina si dos cadenas de caracteres son anagramas.
-     * Dos cadenas son anagramas si tienen los mismos caracteres en la misma
-     * cantidad,
-     * sin importar el orden.
+     * Determina si dos cadenas de caracteres son anagramas. Dos cadenas son
+     * anagramas si tienen los mismos caracteres en la misma cantidad, sin
+     * importar el orden.
      *
-     * Ejemplo 1:
-     * Input: str1 = "listen", str2 = "silent"
-     * Output: true
+     * Ejemplo 1: Input: str1 = "listen", str2 = "silent" Output: true
      * Explicación: Ambas cadenas tienen los mismos caracteres con la misma
      * frecuencia.
      *
-     * Ejemplo 2:
-     * Input: str1 = "hello", str2 = "bello"
-     * Output: false
+     * Ejemplo 2: Input: str1 = "hello", str2 = "bello" Output: false
      * Explicación: Las cadenas tienen diferentes caracteres.
      *
-     * Ejemplo 3:
-     * Input: str1 = "triangle", str2 = "integral"
-     * Output: true
+     * Ejemplo 3: Input: str1 = "triangle", str2 = "integral" Output: true
      * Explicación: Ambas cadenas tienen los mismos caracteres con la misma
      * frecuencia.
      */
     public static boolean areAnagrams(String str1, String str2) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (str1.length() != str2.length()) {} return false; 
 
+
+        char[] array1 = str1.toCharArray();
+        char[] array2 = str2.toCharArray();
+
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+        return Arrays.equals(array1, array2);
     }
 
     /*
